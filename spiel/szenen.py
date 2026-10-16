@@ -49,7 +49,7 @@ class MenueSzene(Szene):
     def zeichnen(self, flaeche):
         flaeche.fill(e.HINTERGRUND)
         text_zeichnen(flaeche, e.TITEL, 72, (e.BREITE / 2, e.HOEHE / 2 - 50), e.GELB)
-        text_zeichnen(flaeche, "Sterne fangen, Steinen ausweichen", 32, (e.BREITE / 2, e.HOEHE / 2 + 10))
+        text_zeichnen(flaeche, "Sterne fangen; Steinen ausweichen", 32, (e.BREITE / 2, e.HOEHE / 2 + 10))
         text_zeichnen(flaeche, "Leertaste oder Klick zum Starten", 28, (e.BREITE / 2, e.HOEHE / 2 + 60), e.GRAU)
 
 
