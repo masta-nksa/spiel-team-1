@@ -4,7 +4,7 @@ import random
 import pygame
 
 import einstellungen as e
-from figuren import Spieler, Stein, Stern
+from figuren import Spieler, Stein, Stein2, Stern
 
 
 @functools.cache
@@ -85,7 +85,11 @@ class SpielSzene(Szene):
     def neues_objekt(self):
         x = random.randint(20, e.BREITE - 20)
         tempo = 160 + self.zeit * 6  # wird mit der Zeit schneller
-        art = Stein if random.random() < 0.3 else Stern
+        if random.random() < 0.3:
+            art = Stein  if random.random() < 0.5 else Stein2
+        else:
+            art = Stern
+        
         self.fallende.add(art(x, tempo))
 
     def verloren(self):
